@@ -91,18 +91,14 @@ export default function AuthPage({ onLoginSuccess }) {
       <div className="absolute bottom-[-15%] left-[10%] w-[700px] h-[700px] bg-emerald-600/15 rounded-full blur-[130px] pointer-events-none z-0" />
 
       <div className="w-full max-w-[1100px] flex flex-col lg:flex-row items-center justify-between bg-white/[0.03] border border-white/[0.08] rounded-[2.5rem] p-8 lg:p-16 backdrop-blur-xl relative shadow-[0_0_100px_rgba(0,0,0,0.8)] z-10 gap-16 lg:gap-24">
-        <div className="w-full lg:w-1/2 flex flex-col items-start justify-center space-y-1 pl-8 lg:pl-12 lg:-mt-20">
-          <svg
-            className="w-24 h-24 lg:w-28 lg:h-28 drop-shadow-[0_0_30px_rgba(0,223,115,0.6)] transition-transform duration-300 hover:scale-105"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6 8L16 30L21 19L11 8H6Z" fill="#00df73" />
-            <path d="M23.5 8L18.5 19L23.5 30L33.5 8H23.5Z" fill="#00df73" />
-          </svg>
+        <div className="w-full lg:w-1/2 flex flex-col items-start justify-center pl-8 lg:pl-12 -mt-25">
+          <img
+  src="/logo.png"
+  alt="Vyro Logo"
+    className="w-[320px] object-contain -m-20"
+/>
 
-          <div className="space-y-2">
+          <div className="space-y-5">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-white drop-shadow-2xl">
               VYRO{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00df73] to-[#00ff85] drop-shadow-[0_0_15px_rgba(0,223,115,0.4)]">
