@@ -1,1 +1,36 @@
+/* file: src/index.css */
 @import "tailwindcss";
+
+/* Target all scrollbars in the app */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Completely hide the track (removes the gray/white line) */
+*::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Sleek emerald thumb */
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Emerald thumb on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 223, 115, 0.4);
+  background-clip: content-box;
+}
+
+/* Hide scrollbar completely if using the hide class */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

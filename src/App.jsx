@@ -2,12 +2,14 @@
 import React, { useEffect, useState } from "react";
 import AuthPage from "./components/Auth";
 import Dashboard from "./pages/Dashboard";
+import Settings from "./pages/Settings";
 import { auth } from "./firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState("Dashboard"); // Default to Dashboard
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -25,6 +27,7 @@ export default function App() {
       console.error("Logout Error:", error);
     }
     setUser(null);
+    setCurrentPage("Dashboard"); // Reset to dashboard on logout
   };
 
   if (loading) {
@@ -35,12 +38,15 @@ export default function App() {
     );
   }
 
-  // SECURITY GATE: Must have a user AND their email must be verified
+  // SECURITY GATE
   if (!user || (user && !user.emailVerified)) {
     return <AuthPage user={user} />;
   }
 
-  return (
-    <Dashboard user={user} onLogout={handleLogout} />
-  );
+  // PAGE ROUTER
+  if (currentPage === "Settings") {
+    return <Settings user={user} onLogout={handleLogout} activePage={currentPage} onNavigate={setCurrentPage} />;
+  }
+
+  return <Dashboard user={user} onLogout={handleLogout} activePage={currentPage} onNavigate={setCurrentPage} />;
 }
