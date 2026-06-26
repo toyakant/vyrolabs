@@ -114,6 +114,10 @@ Automatically sync trades from supported brokers without manual entry.
 
 <img src="Screenshots/trades.png" width="900"/>
 
+## Gallery
+
+<img src="Screenshots/gallery.png" width="900"/>
+
 ---
 
 # 🛠 Tech Stack
