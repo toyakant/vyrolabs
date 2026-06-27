@@ -137,7 +137,7 @@ Automatically sync trades from supported brokers without manual entry.
 | ✅      | Dashboard          |
 | ✅      | Trade Journal      |
 | ✅      | Analytics          |
-| 🚧     | Screenshot Upload  |
+| ✅     | Screenshot Upload  |
 | 🚧     | Vyro Limiter       |
 | ⏳      | AI Trading Coach   |
 | ⏳      | Broker Integration |
